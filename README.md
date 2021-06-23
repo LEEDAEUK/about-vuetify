@@ -76,4 +76,40 @@ $font-family-jp: "Noto Sans JP", sans-serif;
 ```
 
 
++ ### **폰트 디자인**
+    **class 에 작성하자: 이미 css에 적용되어 있는 폰트사이즈와 폰트 웨이트를 가져와서 사용한다고 생각하면 쉽다**
+
+예)
+```html
+<p> class="title font-weight-regular"</p>
+```
+
+* ### Font size
+
+```css
+.display-1
+.display-2
+.display-3
+.display-4
+.headline
+.title
+.subtitle-1
+.subtitle-2
+.body-1
+.body-2
+.caption
+.overline
+```
+
+* ### Font weight
+
+```css
+.font-weight-black
+.font-weight-bold
+.font-weight-medium
+.font-weight-regular
+.font-weight-light
+.font-weight-thin
+.font-italic
+```
 
