@@ -30,7 +30,28 @@ export default {
 </style>
 ```
 
+## **deep selector에 접근**
+**뷰티파이의 경우, 이미 세팅된 설정을 사용하므로 자동으로 생성되는 자식 프로퍼티가 있다. 코드에 없지만 인스펙터에서 확인 가능한 프로퍼티를 만지고 싶을 때**
 
+```css
+<style scoped>
+>>> .v-toolbar__content {
+  padding: 0px !important;
+  display: flex;
+  flex-direction: column;
+}
+>>> .v-main__wrap {
+  background-image: url("~@/assets/newspaper.jpg");
+  background-size: 300px 300px;
+  background-repeat: repeat;
+}
+>>> .v-main {
+  height: 100%;
+}
+</style>
+```
+
+***
 # Font
 
 ## **기본폰트 변경**
@@ -144,29 +165,9 @@ $font-family-jp: "Noto Sans JP", sans-serif;
 .font-italic
 ```
 
-***
 
-## **deep selector 작성법**
-**뷰티파이의 경우, 이미 세팅된 설정을 사용하므로 자동으로 생성되는 자식 프로퍼티가 있다. 코드에 없지만 인스펙터에서 확인 가능한 프로퍼티를 만지고 싶을 때**
 
-```css
-<style scoped>
->>> .v-toolbar__content {
-  padding: 0px !important;
-  display: flex;
-  flex-direction: column;
-}
->>> .v-main__wrap {
-  background-image: url("~@/assets/newspaper.jpg");
-  background-size: 300px 300px;
-  background-repeat: repeat;
-}
->>> .v-main {
-  height: 100%;
-}
-</style>
-```
 
-***
+
 
 
