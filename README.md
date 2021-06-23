@@ -1,11 +1,41 @@
-# vuetify에 관하여
-###
+# 작성법
 
-## Font
+## 기본 component 작성법
 
-+ ### **기본폰트 변경**
 
-    **기본 폰트를 변경할 수 있지만 약간 복잡하다. 하지만 한번 설정해두면 계속 사용할 수 있다**
+```vue
+<template>
+  <v-container>
+    <v-layout column>
+      <v-flex class="d-flex align-center justify-center">
+        <div></div>
+      </v-flex>
+    </v-layout>
+  </v-container>
+</template>
+
+<script>
+export default {
+  created() {
+    this.$emit("Title", "title name");
+  },
+  data() {
+    return {};
+  },
+  methods: {},
+};
+</script>
+
+<style scoped>
+</style>
+```
+
+
+# Font
+
+## **기본폰트 변경**
+
+**기본 폰트를 변경할 수 있지만 약간 복잡하다. 하지만 한번 설정해두면 계속 사용할 수 있다**
 
 1. 아래의 경로에 variables.scss 생성   
 frongend / src / styles / variables.scss 
@@ -74,10 +104,11 @@ $font-family-jp: "Noto Sans JP", sans-serif;
   </v-container>
 </template>
 ```
+ 
+***
 
-
-+ ### **폰트 디자인**
-    **class 에 작성하자: 이미 css에 적용되어 있는 폰트사이즈와 폰트 웨이트를 가져와서 사용한다고 생각하면 쉽다**
+## **폰트 디자인**
+**class 에 작성하자: 이미 css에 적용되어 있는 폰트사이즈와 폰트 웨이트를 가져와서 사용한다고 생각하면 쉽다**
 
 예)
 ```html
@@ -112,4 +143,30 @@ $font-family-jp: "Noto Sans JP", sans-serif;
 .font-weight-thin
 .font-italic
 ```
+
+***
+
+## **deep selector 작성법**
+**뷰티파이의 경우, 이미 세팅된 설정을 사용하므로 자동으로 생성되는 자식 프로퍼티가 있다. 코드에 없지만 인스펙터에서 확인 가능한 프로퍼티를 만지고 싶을 때**
+
+```css
+<style scoped>
+>>> .v-toolbar__content {
+  padding: 0px !important;
+  display: flex;
+  flex-direction: column;
+}
+>>> .v-main__wrap {
+  background-image: url("~@/assets/newspaper.jpg");
+  background-size: 300px 300px;
+  background-repeat: repeat;
+}
+>>> .v-main {
+  height: 100%;
+}
+</style>
+```
+
+***
+
 
