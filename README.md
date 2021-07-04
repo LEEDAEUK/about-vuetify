@@ -165,8 +165,43 @@ $font-family-jp: "Noto Sans JP", sans-serif;
 .font-italic
 ```
 
+***
+
+## **폰트 색상**
+**사전에 미리 색상을 지정해두자. vuetify 객체에서 사용할 수 있다 (css에서 미리 지정 후 사용해도 될 것 같다)**
+
+예)
+```jsx
+import Vue from 'vue'
+import Vuetify from 'vuetify/lib'
+
+//여기 추가
+import colors from 'vuetify/lib/util/colors'
+
+Vue.use(Vuetify)
+
+export default new Vuetify({
+//여기 추가
+  theme: {
+    themes: {
+      light: {
+        primary: colors.red.darken1, // #E53935
+        secondary: colors.red.lighten4, // #FFCDD2
+        accent: colors.indigo.base, // #3F51B5
+      },
+    },
+  },
+})
+```
+```html
+<p> class="primary--text"</p>
+```
 
 
+
+* ### 색상 참고
+
+https://vuetifyjs.com/en/styles/colors/#classes
 
 
 
